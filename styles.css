@@ -1,0 +1,268 @@
+:root {
+    --black: #050505;
+    --accent: #1b9aaa;
+    --grey: #dddbcb;
+    --light-grey: #f5f1e3;
+    --white: #ffffff; 
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+nav {
+  width:0;
+	height: 100%;
+	position: fixed;
+	z-index:1;
+	top:0;
+	left:0;
+	background: var(--black);
+	color:var(--white);
+	overflow-x: hidden;
+	transition: .5s;
+}
+.mobile-wrapper {
+	display: flex;
+	align-content: center;
+	position: relative;
+}
+.mobile-wrapper h1 {
+	position: absolute;
+	top:.5em;
+	left:70px;
+}
+.header-text {
+	padding:1em;
+}
+
+.container {
+	transition: margin-left .5s;
+	background: var(--black);
+}
+
+.showHideNav {
+	box-sizing:border-box;
+	border: solid 2px #000;
+	border-radius: 5px;
+	background: #fff;
+	width: 4em;
+	height: 4em;
+	transition: ease-in .5s;
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+}
+
+.showHideNav:hover{
+	background: var(--grey);
+	transition: ease-in .5s;
+	cursor: pointer;
+}
+
+.showHideNav:active{
+	background: var(--accent);
+	border:solid 2px var(--accent);
+	transition: ease-in .5s;
+	cursor: pointer;
+}
+
+.showHideNav img {
+	width:80%;
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
+
+nav li {
+	background: var(--grey);
+	width: 100%;
+	height:3em;
+	position: relative;
+	transition: ease-in .5s;
+}
+
+nav li a {
+	font-family: 'Raleway';
+	position: absolute;
+	top:1em;
+	bottom:1em;
+	display: inline-block;
+	text-decoration: none;
+	color:var(--black);
+	text-align: center;
+	width:100%;
+	height:100%;
+	transition: ease-in .5s;
+}
+
+nav li:hover {
+	background: var(--accent);
+	transition: ease-in .5s;
+}
+
+nav li:hover a {
+	color:var(--white);
+	transition: ease-in .5s;
+}
+
+h1 {
+		font-size:2em;
+		font-family:'Kalam',cursive;
+		color:var(--light-grey);
+	}
+	.header-text h2 {
+		font-size: .8em;
+		font-family: 'Kalam';
+		opacity: .8;
+	}
+
+  nav .icon {
+	 display: none;
+  }
+
+header {
+	background: url('./media/aquarium.jpg');
+	background-size: cover;
+	color:white;
+	height:250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	align-content: center;
+	text-align: center;
+	position: relative;
+	
+}
+.header-overlay {
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	background: var(--accent);
+	opacity: .5;
+}
+
+header h2 {
+	z-index:1;
+	font-family: 'Raleway';
+}
+
+header h2:first-of-type{
+		font-family: 'Kalam';
+		font-size:2em;
+}
+
+header h2{
+	padding:0 1em;
+}
+
+@media screen and (min-width: 600px) {
+	nav {
+		background: var(--black);
+		position: static;
+		width:100% !important;
+	  height: initial;
+	  overflow-x: hidden;
+		overflow-y: hidden;
+	  padding-top: 3em;
+	  transition: .5s;
+		padding: 0;
+	}
+	.nav-left {
+		padding: 1em;
+		display:flex;
+	}
+	
+	.header-text {
+		margin: 0 1em;
+		padding: 0;
+	}
+	
+	nav ul {
+		display: flex;
+	}
+	h1 {
+		font-size:3em;
+	}
+	.header-text h2 {
+		font-size: 1.2em;
+	}
+	nav .icon {
+		width:50px;
+		display: flex;
+		border:solid 2px var(--grey);
+		padding: .5em;
+		border-radius: 5px;
+		background: #fff;
+		transition:ease-in .5s;
+	}
+	
+	nav .icon:hover {
+		background:var(--grey);
+		transition: ease-in .5s;
+	  cursor: pointer;
+		border:solid 2px var(--accent);
+	}
+	
+	.mobile-wrapper{
+		display: none;
+	}
+	
+	header {
+		height: 500px;
+		padding: 2em;
+		font-family: 'Raleway';
+		color:var(--light-grey);
+	}
+
+	header h2:first-of-type {
+		font-size:4em;
+	}
+	
+	header h2 {
+		font-size:1.5em;
+	}
+}
