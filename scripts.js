@@ -2,13 +2,13 @@
 
 const showNav = () => {
     document.querySelector("nav").style.width = "250px";
-    document.querySelector(".container").style.marginLeft = "250px";
+    document.querySelector(".container").classList.add('move');
     document.querySelector(".showHideNav").classList.add("rotate");
 }
 
 const hideNav = () => {
     document.querySelector("nav").style.width = "0";
-    document.querySelector(".container").style.marginLeft = "0";
+    document.querySelector(".container").classList.remove('move');
     document.querySelector(".showHideNav").classList.remove("rotate");
 }
 

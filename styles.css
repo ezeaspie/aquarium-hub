@@ -79,7 +79,7 @@ nav {
 }
 
 .container {
-	transition: margin-left .5s;
+	transition: ease .5s all;
 	background: var(--black);
 }
 
@@ -252,6 +252,11 @@ section h2 {
 	transition:ease .3s;
 }
 
+.text-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
 .section-link {
 	display: inline-block;
 	border-radius: 5px;
@@ -262,10 +267,10 @@ section h2 {
 	font-weight: bold;
 	color:var(--white);
 	margin: 1em 0;
-	align-self: center;
 	text-align: center;
 	transition:ease .3s all;
 	opacity: .8;
+	align-self: center;
 }
 
 .section-link:hover {
@@ -292,6 +297,53 @@ p {
 	background: url('./media/tank-setup.jpg');
 	background-size: cover;
 	background-position-x: 50%;
+}
+
+.inner-content {
+	margin:0 auto;
+}
+
+.move {
+	transform: translate(250px,0px);
+	transition: ease .5s all;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	background: var(--black);
+	color: var(--light-grey);
+	font-family: 'Raleway';
+	padding: 2em;
+}
+footer small {
+	opacity: .8;
+	font-size: .8em;
+}
+
+.attribution {
+	font-family: 'Raleway';
+	font-size:.8em;
+}
+
+footer a {
+	color:var(--accent);
+	text-decoration: none;
+}
+
+.article-list li{
+	background-image: url('./media/fishblue.svg');
+	background-repeat: no-repeat;
+	background-size: 1em;
+	padding-left:1.5em;
+	margin:.3em;
+}
+
+.emphasis {
+	font-weight: bold;
+	text-align: center;
+	font-size:1.1em;
+	color:var(--black);
 }
 
 @media screen and (min-width: 600px) {
@@ -361,6 +413,16 @@ p {
 		font-size:1.5em;
 	}
 	
+	section p {
+	  line-height: 1.5em;	
+	}
+	
+	.inner-content {
+		max-width:500px;
+	}
+}
+
+@media screen and (min-width:700px) {
 	.content-wrapper {
 		display: flex;
 	}
@@ -370,13 +432,8 @@ p {
 		min-height:300px;
 	}
 	.text-wrapper {
-		display: flex;
-		flex-direction: column;
 		justify-content: space-evenly;
 		font-size:1.2em;
-	}
-	section p {
-	  line-height: 1.5em;	
 	}
 	.section-link {
 		align-self: start;
@@ -392,5 +449,8 @@ p {
 	}
 	section {
 		padding:3em;
+	}
+	.inner-content {
+		max-width:1200px;
 	}
 }
